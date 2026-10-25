@@ -1,0 +1,32 @@
+{
+  "version": "equipment-art-r1",
+  "tool": "built-in image_gen",
+  "created": "2026-10-11",
+  "assets": [
+    {
+      "file": "wukong-equipment-parts-r1.png",
+      "generatedSource": "C:/Users/Administrator/.codex/generated_images/01a12979-9d01-7aa2-ae7a-b6990f7f5b63/exec-a4655345-58cb-4847-9f08-a3c74e706d79.png",
+      "referenceFiles": [
+        "assets/art/concepts/pet-equipment-r1/wukong-gear.png",
+        "assets/art/wukong-parts-v1.png"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: a production 2D game paper-doll character and equipment atlas, transparent PNG, 4 columns by 3 rows of equal cells.\nInput images: first image is the approved complete Q-style Monkey King hero and armor design, second image is the existing Monkey King component atlas for pose, face identity and animation anchor reference. They are references only. Produce brand-new separate pieces, not a whole character.\nPrimary request: recreate the approved gold/red/deep slate-blue Monkey King gear and the same brave handsome expressive monkey face as separate independent painted sprite pieces for the project's live equipment system.\nComposition: 4 columns x 3 rows. All pieces fully inside their own equal cell, each with generous empty transparent gutter. No piece may touch another cell. No labels or grid lines. All faces point right in the same three-quarter side view, same size and exact neck anchor. Keep expressive monkey muzzle, golden swept-back fur, round exposed ear, confident eyebrows.\nROW 1, left to right: (1) bare unadorned head, confident smile, (2) same bare head with battle shout, (3) same bare head blinking eyes shut and slight smile, (4) same bare head glowing golden pupils. All four heads must have NO crown, NO headband, NO jewel, NO helmet; uninterrupted natural forehead fur. Head includes a short neck only, no body or scarf.\nROW 2, left to right: (1) separate golden crown/headband with swirling central red jewel and swept gold brow arms, facing right, hollow open bottom, matching the approved headband, NO head attached; (2) separate ornate dark slate scale chest armor with broad gold border and central golden lion/cloud crest and red neck scarf, NO arms NO hands NO head NO legs, narrow lower waist; (3) separate red and dark slate/gold plated skirt with tiger-fur lower panels and red sash, no legs; (4) separate small golden FIRE-WHEEL ring charm for the waist, obvious round hollow gold ring with flowing red/orange flame tips and short red hanging cord, NO jade disk.\nROW 3, left to right: (1) one separate upper-arm shoulder armor piece, top shoulder golden cloud pauldron then short golden-fur upper arm ending at elbow, vertically down, NO hand; (2) one separate dark slate and gold forearm bracer with two turquoise gems, vertical with golden-fur wrist, NO hand, (3) one separate dark slate and gold boot with turquoise gem and upturned toe pointing right, no leg above boot, (4) EMPTY transparent cell.\nStyle: original refined Q-style Journey to the West adventure illustration, warm dimensional painted cel shading, clear ink outlines, gold specular planes, soft fur clusters, readable compact shapes. Match references faithfully. These will be tiny live sprites: preserve large shapes, avoid thin noisy microdetail. Both faces and armor should look like the SAME character as the approved illustration. Each isolated piece must be a finished opaque painting inside its shape with real transparent alpha outside. Orthographic game-sprite treatment, no shadows projected outside objects.\nConstraints: genuinely transparent background, no checkerboard baked in, no words, no watermark, no whole character, no weapons. Exactly 11 isolated parts arranged as above.",
+      "processing": "Copied original PNG without pixel edits. Rectangle alpha bounds are read-only analysis."
+    },
+    {
+      "file": "staff-quality-parts-r1.png",
+      "generatedSource": "C:/Users/Administrator/.codex/generated_images/01a12979-9d01-7aa2-ae7a-b6990f7f5b63/exec-ff20b564-8e5e-4dc5-bcc1-c460ed1a62be.png",
+      "referenceFiles": [
+        "assets/art/concepts/pet-equipment-r1/staff.png"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: transparent production game sprite atlas, 5 isolated horizontal Monkey King staffs in 5 rows.\nReference image: approved original legendary gold/red staff for style and the final row. Design 4 lower grades of this same item family above it.\nComposition: landscape canvas, 5 equal height rows, ONE complete horizontal staff centered per row, all equal overall length, large transparent gutters. Entire staffs fully visible with clear space at all edges. No words, no frame, no text, no whole character, no glow clouds, no ground shadows, real alpha transparency.\nRow 1: modest dark brown lacquered wooden shaft, simple aged pale iron cylindrical end caps, little decoration, robust readable shape.\nRow 2: deep jade-green lacquer shaft, bronze end caps with a bevel taper and small wrapped bronze grip bands.\nRow 3: deep blue lacquer shaft, brushed silver pointed/beveled end caps and blue inset lines, refined clear metal planes.\nRow 4: deep purple lacquer shaft, gold ribbed three-step end caps with amber inlay and restrained cloud engraving.\nRow 5: faithful approved red lacquer shaft, ornate round gold cloud-scroll end caps, broad polished gold bands, legendary material.\nStyle: original refined Q-style Chinese Journey to the West adventure painted game illustration, clear dimensional cel shading, rich metal planes, softly polished shafts, dark clean outline, match the approved art quality. Long thin shafts with balanced distinct strong end caps: width-to-length ratio around 1:12 overall. The five rows must have recognizably different cap shapes and materials, not only tint changes. All rods straight horizontal, no bend and no perspective rotation. Each object opaque within silhouette and truly transparent outside.",
+      "processing": "Copied original PNG without pixel edits. First four rows are used for lower qualities; fifth row preserves the family design reference."
+    },
+    {
+      "file": "staff-legendary-r1.png",
+      "source": "assets/art/concepts/pet-equipment-r1/staff.png",
+      "promptSource": "assets/art/concepts/pet-equipment-r1/sources.json",
+      "processing": "Copied approved original PNG without pixel edits. Used directly for legendary equipped weapon and its item icon."
+    }
+  ]
+}

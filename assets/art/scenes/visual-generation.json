@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Original foreground surfaces for the celestial chapter visual redesign",
+  "assets": [
+    {
+      "file": "visual-jade-platform-v1.png",
+      "size": [2172, 724],
+      "transparent_background": true,
+      "source": "C:/Users/Administrator/.codex/generated_images/01a171a2-af6b-7b71-b176-09a524cf6cc9/exec-49548fff-d76a-40c4-b29d-9a10ca16b463.png",
+      "prompt": "Use case: stylized-concept. Asset type: one transparent game environment sprite for an original polished Q-version Chinese mythological side-scrolling action game. Paint a single very wide floating celestial jade stone platform viewed straight from the side with a little visible top surface, centered, isolated on true transparent background. The object is a long horizontal rectangular stone slab with a perfectly straight horizontal upper collision edge, a thin warm ivory jade top bevel, substantial blue-green jade front face and a sculpted cloud-shaped rocky underside. Width about 5 times total object height. Ornament is restrained, carved cloud relief and two small aged bronze-gold corner fittings, one subtle circular central jade medallion. Painterly hand-painted 2D game art with clear contour, softly textured stone, distinct dark teal shadow planes underneath, warm upper-left lighting, readable at 180 pixels wide. Keep the top flat and absolutely level; no upward protrusions, no plants, no railing, no stairs, no perspective vanishing point. The slab must not be an ellipse, not a dish, not UI button. No scene, no sky, no cast shadow outside object, no clouds floating around it, no text, no icons, no characters. Wide landscape canvas, ample transparent margin, full object visible.",
+      "use": "Canvas source rectangles only; original PNG preserved. Platform source [24,248,2125,310], bridge-face source [210,276,1750,170]. Exact collision top drawn independently."
+    },
+    {
+      "file": "visual-jade-rail-v1.png",
+      "size": [2172, 724],
+      "transparent_background": true,
+      "source": "C:/Users/Administrator/.codex/generated_images/01a171a2-af6b-7b71-b176-09a524cf6cc9/exec-0b444c76-0cfc-4921-90f4-8f45f14300c2.png",
+      "prompt": "Use case: stylized-concept. Asset type: isolated transparent 2D game scenery sprite. One single horizontal section of a Chinese celestial palace jade balustrade, viewed straight-on from the side, no perspective tilt. Warm ivory and muted blue-green jade stone with restrained aged gold accents. Exactly five evenly spaced slim square stone pillars joined by four low carved stone panels and continuous handrails. Pillars have tiny lotus bud finials, panel faces have softly carved traditional cloud scrollwork. Overall object silhouette 6 times wider than tall, the bottom rests on a single absolutely straight horizontal baseline. Beautiful detailed hand-painted Q-version fantasy game environment art, painterly softened brush textures but crisp outer contour, warm upper-left lighting, teal shadows, refined 2D illustration to match an ornate Chinese heavenly gate. It is architectural background, keep contrast moderate and ornament orderly. Entire object fully visible with transparent margins. True transparent background. No sky, no scenery, no floor underneath, no columns extending out of frame, no characters, no lettering, no UI, no border.",
+      "use": "Canvas source rectangle [29,110,2115,468]; complete segments overlap at pillars and remain behind actors."
+    }
+  ]
+}

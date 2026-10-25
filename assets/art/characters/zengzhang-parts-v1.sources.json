@@ -1,0 +1,57 @@
+{
+  "generator": "Built-in imagegen",
+  "date": "2026-10-11",
+  "png": {
+    "file": "zengzhang-parts-v1.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "colorType": 6,
+    "preserved": "Original RGBA PNG copied byte for byte; no raster editing."
+  },
+  "references": [
+    "../wukong-parts-v1.png",
+    "heaven-enemy-parts-v1.png"
+  ],
+  "parts": {
+    "neutral": {
+      "sourceRect": [
+        67,
+        53,
+        495,
+        538
+      ]
+    },
+    "battle": {
+      "sourceRect": [
+        692,
+        54,
+        495,
+        538
+      ]
+    },
+    "chest": {
+      "sourceRect": [
+        31,
+        652,
+        641,
+        529
+      ]
+    },
+    "waist": {
+      "sourceRect": [
+        658,
+        761,
+        579,
+        416
+      ]
+    }
+  },
+  "notes": [
+    "Bottom chest/waist bounding boxes slightly overlap horizontally; Canvas clips only neighboring-piece pixels.",
+    "Head and torso are painted assets. Limbs, hands, sword and moving cape are original Canvas geometry.",
+    "No original game image is present in this asset."
+  ],
+  "prompt": "Use case: stylized-concept.\nAsset type: production transparent 2D paper-doll parts atlas for an ORIGINAL Chinese Journey to the West side-scrolling game, exactly 2 columns x 2 rows, four separated parts, on one square transparent canvas.\nPrimary request: create the head and armor parts of Zengzhang, the southern celestial sword king. A heroic stately CHIBI human celestial commander, about 2.8 heads tall when assembled, mature handsome clean-shaven face, confident strong brows and focused dark eyes, strong cheek and modest chin, three-quarter SIDE view facing RIGHT. Not a monkey, not a bearded giant, not a toddler.\nInput images: Image 1 is the project's original Monkey King parts atlas, style reference only; Image 2 is the project's original celestial soldier/axe guardian atlas, style reference only. Match their warm dark brown contours, beautiful hand-painted animated fantasy cel finish, upper-left soft gold light, readable clean shading and rounded forms. Create entirely new anatomy and ornaments, no existing-game art.\nIdentity: azure and deep royal blue scale armor, antique gold edging, luminous ivory collar, a royal golden lotus-shaped crown with a central small RED ruby, dark swept hair under crown, no plume or horn helmet. Shoulder armor has elegant CLOUD scrolls rather than lion faces. Palette blue, gold, ivory, tiny red gem.\nExact four cell contents, left to right top to bottom:\nTOP LEFT: isolated head, calm firm watchful expression, including crown, ears, short neck ONLY; no shoulders. Rounded large expressive face, side view facing right, BOTH eyes readable. Low golden lotus crown sits naturally on hair, one small red crown jewel.\nTOP RIGHT: SAME isolated head with exactly same scale, silhouette, placement, crown and proportions, battle expression: stronger brows and small open mouth, not screaming wildly.\nBOTTOM LEFT: isolated chest cuirass including two compact golden CLOUD shoulder caps; no head, arms, belt, skirt or legs. Broad shoulders taper to firm waist, royal blue small scale texture, gold cloud-edged chest frame, ivory neck collar, one simple cloud-scroll central medallion. Three-quarter right view.\nBOTTOM RIGHT: isolated waist assembly: ivory sash, gold belt with small ruby buckle, THREE overlapping royal blue armor tasset panels, clean gold rims and engraved cloud patterns; no torso, arms, head or legs. Short layered tassets, lower hem clearly separated.\nComposition: each object centered entirely within its equal square cell, consistent scale on head pair, generous transparent separation between cells. Never cross cells. Head cells occupy about 80% of cell height; torso and waist occupy about 75% of cell width.\nConstraints: actual alpha transparency throughout empty background and between parts; no ground shadow, no white or checkerboard backdrop, no visible grid, no labels, no text, no watermark, no extra assembled character, no weapons. No vector polygon look, no 3D, no photography, no excessive tiny doodads. Original PNG reusable for Canvas source-rectangle sampling."
+}

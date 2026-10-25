@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "type": "original transparent raster atlas",
+  "file": "relic-atlas-v1.png",
+  "width": 2172,
+  "height": 724,
+  "mode": "RGBA",
+  "transparentPixels": 911612,
+  "sourceRects": {
+    "cloud_umbrella": [
+      34,
+      16,
+      751,
+      696
+    ],
+    "jade_leaf": [
+      883,
+      15,
+      480,
+      698
+    ],
+    "sea_tide_pearl": [
+      1489,
+      100,
+      650,
+      545
+    ]
+  },
+  "prompt": "Use case: stylized-concept. Asset type: one production-ready transparent game inventory sprite atlas, three distinct Chinese fantasy relics in one horizontal row, three equal-width cells. Original polished hand-painted 2D chibi Journey to the West game art, refined ink contours, richly shaded cel-painted surfaces, clean readable silhouettes and warm upper-left light; cohesive muted antique gold and jade material language. Wide landscape canvas. Left cell: a fully open royal indigo-blue Chinese parasol viewed in three-quarter side view, scalloped fabric canopy with restrained pale cloud embroidery, 8 gold ribs, short elegant curved jade-and-gold handle, tiny red silk knot. Center cell: one luminous emerald jade leaf talisman diagonally upright, broad bold leaf silhouette, carved translucent jade with pale veins and an antique gold stalk, modest crimson tassel. Right cell: a large luminous aquamarine ocean pearl with a stylized curling wave visible INSIDE the glass, cradled in a small antique-gold lotus mount, two restrained curls of water close to its silhouette. These are treasured magical objects, not simple flat glyphs or emoji. Render each entire object completely, independent, centered in its own cell and equal optical size. Leave generous transparent separation between all objects and transparent padding around the outer edge. Objects do not touch or overlap. Genuine alpha transparency, no background, no checkerboard, no scene, no floor, no cast shadow, no ambient glow cloud outside the silhouette. No text, numbers, labels, UI border, frames, badges, runes, watermark, or extra objects. Each item must remain recognizable at 48 pixels and have suitable detail for a 112 pixel inventory illustration."
+}

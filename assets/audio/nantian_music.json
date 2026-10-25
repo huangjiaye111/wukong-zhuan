@@ -1,0 +1,61 @@
+{
+  "title": "云阙行 · 南天门",
+  "origin": "Original score and offline synthesis for this project; no recordings or borrowed game music. Flute-like and plucked-string timbres, band-limited air and distant bronze-like strikes are synthesized, not live instruments or field recordings.",
+  "form": [
+    "8 bars: main motif",
+    "8 bars: breathy/plucked answer",
+    "8 bars: movement",
+    "8 bars: return and circular room decay"
+  ],
+  "atmosphere": "Very quiet periodic band-limited air (180–950 Hz), with a distant synthesized bronze-like strike every 8 bars. Included in both loops and the independent preview.",
+  "seed": 20261008,
+  "tracks": {
+    "nantian_adventure": {
+      "seconds": 76.8,
+      "sample_rate": 32000,
+      "channels": 2,
+      "peak": 0.72,
+      "rms_dbfs": -14.94,
+      "seam_step": 0.000741,
+      "normal_step_p999": 0.081319,
+      "bpm": 100,
+      "bars": 32,
+      "wave_bytes": 9830444,
+      "ogg_bytes": 1256767,
+      "atmosphere": {
+        "wind_rms_relative_db": -36.0,
+        "bell_rms_relative_db": -39.28,
+        "bell_peak_relative_db": -33.23,
+        "bell_interval_bars": 8
+      }
+    },
+    "nantian_preview": {
+      "seconds": 26.0,
+      "sample_rate": 32000,
+      "channels": 2,
+      "peak": 0.72,
+      "rms_dbfs": -14.89,
+      "seam_step": 0.0,
+      "normal_step_p999": 0.084223
+    },
+    "nantian_boss": {
+      "seconds": 68.57144,
+      "sample_rate": 32000,
+      "channels": 2,
+      "peak": 0.72,
+      "rms_dbfs": -15.56,
+      "seam_step": 0.012437,
+      "normal_step_p999": 0.077518,
+      "bpm": 112,
+      "bars": 32,
+      "wave_bytes": 8777188,
+      "ogg_bytes": 1140945,
+      "atmosphere": {
+        "wind_rms_relative_db": -36.0,
+        "bell_rms_relative_db": -38.79,
+        "bell_peak_relative_db": -34.23,
+        "bell_interval_bars": 8
+      }
+    }
+  }
+}

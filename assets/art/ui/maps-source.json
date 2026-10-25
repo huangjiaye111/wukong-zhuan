@@ -1,0 +1,23 @@
+[
+  {
+    "asset": "map-heaven-v1.png",
+    "date": "2026-10-25",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: original horizontal illustrated game world-map terrain, landscape 2:1 composition. Paint floating celadon-jade islands in pale golden cloud sea, a few small pine trees and peach blossom trees, curving ribbons of mist and distant sky mountains. Four main open plateaus placed approximately at (15% across,60% down), (38%,33%), (64%,63%), (86%,26%). No buildings on the open plateaus. Style: refined cute Chinese mythology adventure game, hand-painted gouache with clean graceful linework, subtle parchment warmth, coordinated celadon jade / old gold / ivory palette with local terrain colors. Large coherent geographical shapes and gentle depth, visual storytelling but restrained micro-details. Not photorealistic, no 3D render. The actual game will add selectable landmark icons, dotted routes and Chinese labels; leave open quiet areas across the middle. Fill the whole rectangular artwork edge to edge, no border, no UI, no medallions, no circles, no roads, no text, no letters, no map labels, no watermarks. This is finished low-contrast terrain art, readable behind high-contrast interactive markers.",
+    "source": "exec-510e9736-9135-4486-8159-e4756c5df0c8.png"
+  },
+  {
+    "asset": "map-sea-v1.png",
+    "date": "2026-10-25",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: original horizontal illustrated game world-map terrain, landscape 2:1 composition. Paint a pale aquamarine East Sea seen from a gently tilted top-down view, a warm sandy coastline at left, turquoise reef islands through the middle, a darker clear lagoon at right, undersea coral shapes and a few tiny white sea birds, restrained elegant wave patterns. Three open low-detail locations along a left-to-right journey for interactive markers. No buildings or ships. Style: refined cute Chinese mythology adventure game, hand-painted gouache with clean graceful linework, subtle parchment warmth, coordinated celadon jade / old gold / ivory palette with local terrain colors. Large coherent geographical shapes and gentle depth, visual storytelling but restrained micro-details. Not photorealistic, no 3D render. The actual game will add selectable landmark icons, dotted routes and Chinese labels; leave open quiet areas across the middle. Fill the whole rectangular artwork edge to edge, no border, no UI, no medallions, no circles, no roads, no text, no letters, no map labels, no watermarks. This is finished low-contrast terrain art, readable behind high-contrast interactive markers.",
+    "source": "exec-43e62425-4d5f-4678-b983-bc683a9e5bce.png"
+  },
+  {
+    "asset": "map-fire-v1.png",
+    "date": "2026-10-25",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: original horizontal illustrated game world-map terrain, landscape 2:1 composition. Paint legendary Flaming Mountains seen from a gently tilted top-down view, ochre and terracotta volcanic ridges surrounding a winding pale sand valley, red autumn trees, a few dark cave openings near mountains at the right, warm amber mineral seams and very restrained ember glow, three open low-detail locations along a left-to-right journey for interactive markers. No buildings or characters. Style: refined cute Chinese mythology adventure game, hand-painted gouache with clean graceful linework, subtle parchment warmth, coordinated celadon jade / old gold / ivory palette with local terrain colors. Large coherent geographical shapes and gentle depth, visual storytelling but restrained micro-details. Not photorealistic, no 3D render. The actual game will add selectable landmark icons, dotted routes and Chinese labels; leave open quiet areas across the middle. Fill the whole rectangular artwork edge to edge, no border, no UI, no medallions, no circles, no roads, no text, no letters, no map labels, no watermarks. This is finished low-contrast terrain art, readable behind high-contrast interactive markers.",
+    "source": "exec-4baef579-b14f-4591-9986-f875daab0e05.png"
+  }
+]

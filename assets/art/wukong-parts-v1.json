@@ -1,0 +1,76 @@
+{
+  "generator": "Built-in imagegen",
+  "file": "wukong-parts-v1.png",
+  "canvas": [
+    1448,
+    1086
+  ],
+  "prompt": "Use case: stylized-concept.\nAsset type: production transparent 2D paper-doll sprite atlas for an ORIGINAL Journey to the West side-scrolling action game.\nPrimary request: create exactly ONE polished hand-painted Monkey King equipment/face parts atlas, 4 columns x 3 rows, 12 equal square cells on one genuinely TRANSPARENT canvas. Canvas ratio 4:3, ideally 2048 by 1536. No visible grid lines; each object entirely inside its cell with generous transparent separation. This is a functional animation asset, not a poster. All parts belong to the SAME heroic, charismatic CHIBI Sun Wukong, approximately 2.8 heads tall when assembled, facing RIGHT in a restrained 3/4 SIDE view.\nStyle: elegant Chinese fantasy cartoon / traditional animation cel painting, rounded lively contours in warm dark brown, coherent warm upper-left light, two or three clean shade levels with subtly hand-painted gold and fur. Refined readable masses at small sizes. Matching golden celestial palaces, vermilion silk, celadon jade. Expressive authentic MONKEY face, golden brown spiky short fur, peach heart-shaped face mask, visible rounded ear, small protruding muzzle, clever determined eyes and slight confident smile. Small ornate golden circlet/crown with curling cloud motif, NO tall feathers. Heroic and lively, never toddler, never a human face, never angry villain. Gold armor with jade teal accents, crimson scarf and cloak, golden ochre tiger-skin skirt with dark stripes, navy trousers and boots. No black geometric polygon construction, no 3D, no photographic texture.\nExact grid content, left to right, top to bottom:\nRow 1: (1) isolated head normal determined expression; (2) EXACT same head/outline/scale, brows stronger and mouth open in battle; (3) EXACT same head with eyes closed for blink; (4) EXACT same head with luminous golden eyes, otherwise identity unchanged. Head only including ear/circlet and short neck, no shoulders. Every head occupies the same placement/size with identical crown, hair and jaw silhouette.\nRow 2: (5) isolated torso/chest armor and short crimson neck scarf, no head, no arms, no legs, no cape: upper chest in 3/4 right view, slim gold-edged jade/navy cuirass; (6) separate waist belt and flowing TIGER-SKIN skirt/tassets, gold buckle and crimson sash at waist, no torso or legs, warm yellow ochre with bold black tiger stripes; (7) one armored boot/short ankle greave pointing RIGHT, side view, dark navy leather, layered gold rim and curved toe; (8) one long straight VERTICAL gold-banded RED Ruyi Jingu Bang staff, both gold ends with subtle cloud engraving, symmetrical handle grip center. Staff fully contained and extremely elongated, width about 1/12 its height, no glow.\nRow 3: (9) isolated upper-arm piece vertically downward, shoulder pivot top and elbow pivot bottom: small golden pauldron over short golden-brown furry bicep, NO hand/forearm; (10) isolated forearm bracer vertically downward, elbow pivot top and wrist bottom: curved antique-gold armor over fur, NO hand or upper arm; (11) isolated small closed MONKEY fist gripping imaginary vertical staff, peach/golden-brown skin, visible knuckles and thumb on RIGHT, no forearm and no actual weapon; (12) separate crimson shoulder cloak blowing LEFT, neck attachment at upper RIGHT, flowing lower hem to lower LEFT, side view, two or three beautiful red cel shade shapes, narrow golden trim, no torso or head.\nConstraints: consistent painting, outlines, scale within repeated head cells. All separate reusable parts. Every part centered inside its own equal square cell. No assembled extra character, no background, no ground shadows, no text or numbers or labels, no watermark, no border, no opaque/white/checkered background. Actual alpha transparency. NEVER connect parts across cells. Do not copy an existing game's character artwork.",
+  "heads": {
+    "source": [
+      28,
+      12,
+      330,
+      364
+    ],
+    "pitch": 352,
+    "expressions": [
+      "neutral",
+      "angry",
+      "blink",
+      "golden_eyes"
+    ],
+    "anchor": "Same source frame and neck anchor"
+  },
+  "source_rects": {
+    "chest": [
+      67,
+      401,
+      282,
+      308
+    ],
+    "skirt": [
+      373,
+      472,
+      418,
+      267
+    ],
+    "boot": [
+      842,
+      476,
+      223,
+      224
+    ],
+    "staff": [
+      1255,
+      380,
+      45,
+      381
+    ],
+    "upper": [
+      83,
+      739,
+      183,
+      329
+    ],
+    "fore": [
+      467,
+      776,
+      162,
+      282
+    ],
+    "fist": [
+      805,
+      847,
+      151,
+      145
+    ],
+    "cape": [
+      1010,
+      772,
+      397,
+      292
+    ]
+  },
+  "notes": "Original PNG preserved without raster edits. Source rectangles sampled by Canvas. Dynamic cape contour and tail stay procedural; the cape painting fills the moving contour."
+}

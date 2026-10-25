@@ -1,0 +1,53 @@
+{
+  "asset": "archer-bull-parts-v1.png",
+  "date": "2026-10-23",
+  "generator": "OpenAI built-in image_gen",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a16939-eb69-7731-9c07-e9b3751d1e40/exec-271e9916-1208-4dc9-821a-c7f4806e7582.png",
+  "prompt": "Use case: stylized-concept. Asset type: production transparent 2D skeletal sprite sheet for an original hand-painted Chinese Journey to the West side-scrolling action game. Create exactly FOUR isolated cutout parts in a precise 2 by 2 layout on a square transparent canvas. Leave substantial clear TRANSPARENT SPACE around each part, at least 15 percent of its cell; NO part may touch any adjacent cell or the outside edge. No labels, no grid, no backdrop, no ground shadow. Illustrated Chinese fantasy CHIBI style, intended for a rounded 2.8-heads-tall character when rigged: expressive large eyes, broad compact cheeks, short chin, soft dimensional skin, fine dark brown outlines, visible brush-painted metal/leather/fur, upper-left warm light, crisp readable silhouettes and restrained gold trim. No flat polygons, no photorealism, no 3D render. Every part faces RIGHT in three-quarter side view. TOP LEFT: the detached head of a youthful male celestial ARCHER foot soldier, determined dark eyes, warm peach skin, dark swept hair, lightweight blue-green jade/teal helmet with modest gold edging and TWO distinct swept-back ivory and pale green FEATHERS, face and ears visible, head including only a tiny neck stump, no shoulders or chest, no neck extension, no arrows or bow. TOP RIGHT: detached head of a stout red-brown BULL DEMON foot soldier, large expressive slightly fierce eyes with brown brows, short brown-red fur matching warm russet forearms, broad bovine muzzle, small GOLD NOSE RING, two clean ivory horns curving outward/up, small dark tousled forelock, no crown, no gold royal helmet, no long beard, head and a tiny neck stump only, no shoulders or chest. BOTTOM LEFT: isolated matching ARCHER short torso armor with slender compact shoulders, teal and muted jade-green small lamellar scales, muted antique gold edge, diagonal brown leather quiver strap, small gold belt buckle, only one modest rounded shoulder plate, no head, arms, hands, quiver, weapons, skirt or legs. BOTTOM RIGHT: isolated BULL DEMON broad short torso, muscular red-brown hide and brown leather harness, one worn dark silver steel shoulder plate, rough simple dark brown leather belt with modest brass buckle, no head, arms, hands, weapons, skirt or legs; clearly a rugged minion, not a king. All four parts must match the same polished painted chibi game style and be safely separated as reusable Canvas sprite source rectangles. True transparent alpha background and fully transparent gaps.",
+  "inputImages": [],
+  "png": {
+    "size": [
+      1254,
+      1254
+    ],
+    "colorType": 6,
+    "preserved": "Original generated RGBA PNG copied byte for byte; no raster editing."
+  },
+  "parts": {
+    "archerHead": {
+      "sourceRect": [
+        42,
+        84,
+        575,
+        520
+      ]
+    },
+    "bullHead": {
+      "sourceRect": [
+        706,
+        104,
+        522,
+        514
+      ]
+    },
+    "archerChest": {
+      "sourceRect": [
+        119,
+        719,
+        428,
+        433
+      ]
+    },
+    "bullChest": {
+      "sourceRect": [
+        649,
+        712,
+        542,
+        459
+      ]
+    }
+  },
+  "integration": "js/sprites.js archerBullPart. Existing qArcherHead/qArcher torso and minion-only qBullHead/qCharacter bull torso. No changes to joints, bow string, arrow timing, axe movement, gameplay, saves or audio.",
+  "fallback": "Image load failure retains original Canvas faces and chests. Z.Spr.archerBullArtReady(type?) returns true only after atlas onload for known gongshou/niuyao or no argument.",
+  "sources": "Original imagegen work; no copied third-party game asset."
+}

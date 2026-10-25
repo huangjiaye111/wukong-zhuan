@@ -1,0 +1,64 @@
+{
+  "created": "2026-10-23",
+  "generator": "Built-in imagegen, generated for this project during v67 development",
+  "originalPrompt": null,
+  "promptRecord": "Exact generation prompts and original tool output paths were not preserved in the handoff; no reconstructed text is represented as an original prompt.",
+  "role": "Opaque original painted 3:1 distant scenery. Canvas draws collision-aligned walkways and platforms separately.",
+  "references": "The project’s existing Chinese fantasy visual direction; no external photographs or stock assets are included in this delivery.",
+  "processing": "Existing generated PNGs retained without pixel edits by the finishing pass. Runtime draws them at 1740 × 580 with per-stage scrolling, optional tint and atmospheric particles.",
+  "stages": {
+    "2": "courtyard",
+    "3": "throne right",
+    "4": "throne left, purple tower tint",
+    "5": "coast",
+    "6": "underwater left",
+    "7": "underwater right",
+    "8": "volcanic mountains",
+    "9": "cave left jade",
+    "10": "cave right purple/fire"
+  },
+  "assets": [
+    {
+      "file": "heaven-courtyard-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2469583,
+      "sha256": "d806a3ce906d419889dbba52e3f90c06e1ff5b037d215f6c7985e815ac50ad3f"
+    },
+    {
+      "file": "heaven-throne-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2527612,
+      "sha256": "2afbc7fef1f357f3cac0d121d892a0962c97ae66b99df9fd6eb39032d29325d0"
+    },
+    {
+      "file": "east-sea-coast-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2610203,
+      "sha256": "59f3535417edc60ee3a29d08c6c48908f78e1133b9a764ce02947e4428381b7b"
+    },
+    {
+      "file": "east-sea-palace-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2631416,
+      "sha256": "036525b36cc4343844992aee4065dd1214430134610aafdb0425368d725297be"
+    },
+    {
+      "file": "flaming-mountain-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2166530,
+      "sha256": "58ee93c047abe05e787c4826984be61c472e9b406884d3973a66e60969d77098"
+    },
+    {
+      "file": "demon-caverns-v1.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2572385,
+      "sha256": "6a84291bb9c6523b961aeb2742c9da0c70a72d95aca9d0677431faa12f4c153a"
+    }
+  ]
+}

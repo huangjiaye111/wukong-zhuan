@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "type": "original transparent RGBA raster atlas",
+  "file": "v79-map-landmarks.png",
+  "originalFile": "C:/Users/Administrator/.codex/generated_images/01a1719f-5683-77c0-be65-666944a26a9c/exec-35f950eb-16cb-4682-83e0-9d8f558cf695.png",
+  "prompt": "Use case: stylized-concept. Asset type: production-ready TRANSPARENT RGBA game map landmark sprite atlas. Original polished Chinese fantasy Journey to the West 2D hand-painted art, refined dark ink contours, painterly cel shading, jade stone, antique gold, vermilion wood, soft warm light from upper left. Match a refined chibi adventure game, not photorealism and not flat vector icons. Request a landscape canvas with EXACTLY FOUR COLUMNS and THREE ROWS of equal SQUARE cells, total twelve slots, 4:3 canvas approximately 2048x1536. Eleven independent miniature landmarks in precise ROW-MAJOR ORDER. Row 1 left to right: 1) Southern Heavenly Gate: one grand broad double-column vermilion gateway with sweeping gold tiled roof on a small white cloud and jade stair base; 2) Immortal Peach Garden: a lush pink blossoming peach grove surrounding a small jade courtyard wall, visible golden peaches; 3) Celestial Palace Forecourt: elegant ivory colonnade and long rising jade stairway with a small teal roof pavilion, clearly an outdoor stair court, not a palace; 4) Throne Palace: an imposing symmetric three-tier golden celestial palace with red pillars and turquoise ornaments, visibly grander and taller than the gate. Row 2 left to right: 5) Demon-Sealing Tower: tall slender six-tier dark jade and muted violet pagoda with antique gold eaves and glowing sealed gate; 6) East Sea Beach: pale sandy crescent with two elegant palms, turquoise shore curl and sea-worn rocks, NO building; 7) Undersea Corridor: open arched jade colonnade encrusted with pink coral, seaweed and tiny pearls, NO roofed palace; 8) Crystal Dragon Palace: radiant aquamarine crystalline Chinese palace, faceted blue crystal towers and large pearl above its central gate. Row 3 left to right: 9) Flaming Mountain Pass: jagged russet volcanic peak with a winding ochre path and two clear orange lava cracks, NO building; 10) Banana-Leaf Cave: mysterious green rocky cave entrance framed by large green banana leaves and vines, graceful jade door surround; 11) Cloud-Rubbing Demon Cave: dark imposing craggy cave stronghold with two curved ox-horn-shaped rock peaks over its red and antique-gold gate, NO character; 12) completely EMPTY transparent cell. Every landmark is a SINGLE cohesive miniature with an organic tiny island/rock/cloud base contained inside its own cell. Same tasteful three-quarter map view and light, approximately equal optical height except tower taller, centered in each square. Keep the complete silhouette, no cropped tops or bottoms. Each occupies the central 72 percent of its cell, at least 12 percent transparent padding all around. Large empty transparent gutters, absolutely no overlaps between cells. Real alpha transparency, no backdrop, no colored rectangles, no checkerboard, no floor outside the miniatures, no cast shadows extending beyond silhouette. No grid, lines, cell borders, text, letters, numbers, runes, labels, watermarks or extra icons. Readable and distinct at about 90x70 display pixels, with crafted painted detail for a larger hover view.",
+  "transparencyRequested": true,
+  "processing": "Original generated PNG copied without pixel editing. Canvas source rectangles only.",
+  "width": 1448,
+  "height": 1086,
+  "mode": "RGBA",
+  "atlasLayout": {
+    "columns": 4,
+    "rows": 3
+  },
+  "transparentPixels": 670768,
+  "sourceRects": {
+    "0": [
+      10,
+      28,
+      347,
+      329
+    ],
+    "1": [
+      376,
+      17,
+      340,
+      337
+    ],
+    "2": [
+      729,
+      53,
+      346,
+      300
+    ],
+    "3": [
+      1089,
+      12,
+      359,
+      358
+    ],
+    "4": [
+      37,
+      362,
+      293,
+      362
+    ],
+    "5": [
+      366,
+      385,
+      351,
+      328
+    ],
+    "6": [
+      733,
+      398,
+      344,
+      314
+    ],
+    "7": [
+      1090,
+      370,
+      344,
+      354
+    ],
+    "8": [
+      16,
+      729,
+      343,
+      345
+    ],
+    "9": [
+      374,
+      729,
+      338,
+      334
+    ],
+    "10": [
+      729,
+      728,
+      350,
+      334
+    ]
+  },
+  "inspection": "Alpha analysed read-only. Source rectangles contain meaningful alpha silhouette plus padding. Original alpha and pixels preserved; no thresholding, trimming, scaling or background edits were applied to the PNG."
+}

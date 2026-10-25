@@ -1,0 +1,8 @@
+{
+  "asset": "hero-stage-v1.png",
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: original painted game UI character showcase backdrop, portrait 2:3 composition, no UI, no words. Create a refined hand-painted Chinese mythological heavenly courtyard for a cute heroic Monkey King RPG. The image is a quiet display stage behind a separate character sprite; DO NOT paint any person, animal, weapon or object in its broad empty center. Delicate pale celadon jade pillars at far left and right edges, a faint circular moon-gate arch in the upper half, a distant low-contrast cloud sea and tiny celestial pavilion, warm ivory sunlight in the empty center. Bottom 15 percent: a broad solid oval jade stone dais with clear light top and darker teal carved side, gentle gold rim, physically dimensional, soft cloud wisps behind not on top. Painterly clean outlines, elegant cel-shaded illustrated videogame aesthetic, simplified coherent shapes rather than photorealism. Keep central 65 percent uncluttered pale ivory/blue-green, restrained and muted. Fine craftsmanship on side framing, center readable for foreground character. Soft light from upper left. No black heavy frame, no interface, no letters, no watermark. A single complete vertical background image.",
+  "purpose": "六系统窗口中的角色与物品陈列背景，原图按容器裁切，原生Canvas回退。",
+  "generatedSource": "C:/Users/Administrator/.codex/generated_images/01a1719e-b66f-77d0-aeb4-8c4e4832782e/exec-6b0a731e-5d6f-41a5-977e-78d12e0de108.png"
+}

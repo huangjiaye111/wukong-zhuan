@@ -1,0 +1,22 @@
+{
+  "generator": "Built-in image_gen.imagegen",
+  "created": "2026-10-11",
+  "asset": "pantao-garden-v1.png",
+  "sourceOutput": "C:/Users/Administrator/.codex/generated_images/01a12919-0743-7830-9318-1f782aa30c89/exec-838cd51a-377b-4e30-a1c8-20392b948505.png",
+  "width": 2172,
+  "height": 724,
+  "transparent": false,
+  "role": "Original far/middle painted panorama for peach theme; code draws all playable geometry",
+  "references": [
+    {
+      "path": "assets/art/nantian-cloud-city.png",
+      "role": "Project original reference, painting style/color only"
+    },
+    {
+      "path": "assets/art/nantian-veranda.png",
+      "role": "Project original reference, cel shaded material detail only"
+    }
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: ORIGINAL production painted background panorama for a 960x540 side-scrolling 2D Chinese mythology action game, NOT a UI mockup. Create a wide panoramic image, approximately 3:1, about 3072x1024. Depict the Celestial Peach Garden, 蟠桃园: richly drawn ancient peach trees with twisting brown branches, distinct emerald and sage leaves, peach-pink blossoms and a few big ripe pink-and-gold peaches; pale jade garden railings and an elegant small red-column pavilion with turquoise glazed roof and restrained gold trim; a distant garden moon gate, warm pale-gold cloud sea and delicate floating mountains. Painterly cel-shaded illustrated game art, rounded Q-style fantasy shapes, readable dark brown/teal contours, detailed two-tone materials with soft light, matching the provided project's cloud city and golden veranda quality. Side-on stage scenery, no tilted top-down camera, no foreground obstacles. Arrange orchard and pavilion primarily in the upper half and background depth; varied tree groups across the width, room to pan horizontally, no giant central solid trunk. IMPORTANT gameplay composition: the entire lower 40% of the image must be low-contrast pale mint/ivory mist and garden atmosphere, no dark trunks, branches, fences, stairs, raised platforms or objects there. Main trunks terminate around 60% image height, visually BEHIND a game walkway that will be drawn separately. Keep a broad uncluttered central battle zone between 45% and 85% image width. Bloom canopies decorate upper left and upper right, a gentle peach blossom grove sits in the left middle, pavilion subtly offset right. Warm late afternoon light, airy sacred garden, beautiful color harmony, no characters, no enemies, no weapon, no interface, no letters or signs, no watermark, no sun glare across the combat region. All artwork original for this project; references only for painting style, do not copy their exact buildings. Opaque full background, not transparent.",
+  "processing": "Original PNG copied into workspace, no image resizing, cropping, editing or compositing."
+}

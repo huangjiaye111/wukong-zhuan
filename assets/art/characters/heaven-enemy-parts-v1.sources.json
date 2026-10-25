@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "generatedDate": "2026-10-08",
+  "artifact": "heaven-enemy-parts-v1.png",
+  "useCase": "stylized-concept",
+  "tool": "image_gen.imagegen (built-in)",
+  "transparentBackground": true,
+  "referenceImage": "../wukong-parts-v1.png",
+  "referenceRole": "Original project Wukong atlas, style only",
+  "generatedSource": "C:/Users/Administrator/.codex/generated_images/01a11bac-8b88-7ab2-98f6-a443bdc03e3e/exec-65c415fa-b767-436e-bce3-8ec8d62701bd.png",
+  "sha256": "b72984729208950e1b5830ab8363f25dbeb7bda13869955c6f586a99b7d3687f",
+  "png": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "bytes": 1726786,
+    "alpha0": 866585,
+    "alpha255": 1788,
+    "alphaPartial": 704143,
+    "cornersAlpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "cropConvention": "sourceRect=[x,y,width,height]; alphaBBox=[left,top,right-exclusive,bottom-exclusive], alpha>=2. Source rectangles add four pixels of safe padding. No post-generation pixel edits.",
+  "anchorConvention": "Anchor, neck, and shoulder coordinates are visually estimated source-pixel rig suggestions, not automatically detected anatomical joints. SuggestedSize is logical Canvas units before entity scale. Check integrated 960x540 output.",
+  "parts": {
+    "soldierHead": {
+      "alphaBBox": [
+        84,
+        43,
+        545,
+        549
+      ],
+      "sourceRect": [
+        80,
+        39,
+        469,
+        514
+      ],
+      "anchorSource": [
+        348,
+        528
+      ],
+      "anchorRole": "neck-base",
+      "suggestedSize": [
+        38,
+        42
+      ],
+      "anchorLocal": [
+        268,
+        489
+      ],
+      "anchorNormalized": [
+        0.5714,
+        0.9514
+      ]
+    },
+    "soldierTorso": {
+      "alphaBBox": [
+        720,
+        157,
+        1195,
+        587
+      ],
+      "sourceRect": [
+        716,
+        153,
+        483,
+        438
+      ],
+      "anchorSource": [
+        999,
+        434
+      ],
+      "anchorRole": "waist-center",
+      "suggestedSize": [
+        36,
+        33
+      ],
+      "neckSource": [
+        962,
+        199
+      ],
+      "shouldersSource": [
+        [
+          806,
+          294
+        ],
+        [
+          1103,
+          291
+        ]
+      ],
+      "anchorLocal": [
+        283,
+        281
+      ],
+      "anchorNormalized": [
+        0.5859,
+        0.6416
+      ]
+    },
+    "julingHead": {
+      "alphaBBox": [
+        35,
+        601,
+        578,
+        1193
+      ],
+      "sourceRect": [
+        31,
+        597,
+        551,
+        600
+      ],
+      "anchorSource": [
+        347,
+        1115
+      ],
+      "anchorRole": "neck-base-under-beard",
+      "suggestedSize": [
+        60,
+        65
+      ],
+      "anchorLocal": [
+        316,
+        518
+      ],
+      "anchorNormalized": [
+        0.5735,
+        0.8633
+      ]
+    },
+    "julingTorso": {
+      "alphaBBox": [
+        618,
+        694,
+        1232,
+        1208
+      ],
+      "sourceRect": [
+        614,
+        690,
+        622,
+        522
+      ],
+      "anchorSource": [
+        974,
+        1045
+      ],
+      "anchorRole": "waist-center",
+      "suggestedSize": [
+        72,
+        60
+      ],
+      "neckSource": [
+        917,
+        743
+      ],
+      "shouldersSource": [
+        [
+          724,
+          890
+        ],
+        [
+          1132,
+          884
+        ]
+      ],
+      "anchorLocal": [
+        360,
+        355
+      ],
+      "anchorNormalized": [
+        0.5788,
+        0.6801
+      ]
+    }
+  },
+  "prompt": "Use case: stylized-concept\nAsset type: original transparent sprite-parts atlas for a native Canvas Chinese myth adventure game.\nInput image 1: STYLE REFERENCE ONLY, the existing original Wukong atlas. Match its warm hand-painted 2D shading, crisp dark outlines, carved gold rims, expressive heroic Q-version faces and readable bold volumes. Generate new original heavenly enemies, not copies of Wukong.\nPrimary request: exactly FOUR separate riggable parts in a simple evenly spaced 2 by 2 grid, on a true transparent background. Top-left: heavenly soldier head. Top-right: heavenly soldier torso armor. Bottom-left: Juling Shen giant heavenly general head. Bottom-right: Juling Shen torso armor.\nComposition: square atlas, each part fully within its own quadrant with broad transparent margins and absolutely no contact between parts. Heads look to screen RIGHT in the same three-quarter side perspective as the reference Wukong faces. Torso parts have matching three-quarter right perspective. Nothing cut off. No labels, no frames, no separator lines, no extra pieces.\nSoldier head: heroic young male human, clear serious brows and eyes, visible nose and right-facing face, blue teal steel helmet with gold edging and a short red plume, cheek guards, modest helmet silhouette.\nSoldier torso: one detached compact chest plate with shoulder guards and short waist skirt plates, blue teal steel with warm gold edging, subtle cloud ornament, empty neck opening at top, NO head, NO arms, NO hands, NO legs. Shoulder guards are part of this torso but no limb stubs. Q-version simplified readable bulk.\nJuling Shen head: imposing mature male human general, wide face, fierce clear brows and readable eyes, thick dark moustache and short broad beard, blue teal lion-shaped helmet with carved gold rim and red crown/plume, heroic and stern. Right-facing three-quarter perspective, not front-facing and not an animal face.\nJuling Shen torso: broad heavy blue teal chest armor with wide shoulder guards, carved gold lion emblem and gold edging, red sash across waist, short overlapping waist skirt plates. Empty neck opening, NO head, NO arms, NO hands, NO legs, no weapons. Strong broad silhouette while retaining compact Q-version proportions.\nStyle: polished hand-painted Chinese fantasy game illustration, clean brush highlights and shaded steel/gold materials just like reference, readable at small game size. Not photorealistic, not 3D, not vector-flat, not pixel art.\nConstraints: four isolated parts only, no whole characters, no weapons, no scenery, no cast shadows, no text, no watermark. Genuinely transparent PNG alpha outside the parts; do not paint a checkerboard or solid background. Preserve generous empty space between all four parts.",
+  "validation": [
+    "Viewed original Wukong reference before generation.",
+    "Viewed final saved PNG at original resolution.",
+    "Verified RGBA alpha, fully transparent corners and 866585 alpha-zero pixels using Pillow.",
+    "Measured separate part bounds using alpha>=2 in isolated regions; confirmed padded source rectangles do not overlap.",
+    "No browser opened, no music or battle sound played, no system volume changed."
+  ],
+  "limitations": [
+    "One fixed stern expression per head; blink and hit reactions still require Canvas accents or a future expression atlas.",
+    "Red plumes are longer than the compact requested silhouette; suggested render sizes keep the faces comparable to Wukong but need integrated small-size review.",
+    "Torso includes shoulder guards and waist skirt as one rigid painting; arms and legs must remain Canvas-rigged behind or around this part.",
+    "No integrated combat visual acceptance in this asset-only subtask; parent specialist owns live-size and motion verification."
+  ]
+}

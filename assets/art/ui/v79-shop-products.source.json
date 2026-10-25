@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-25",
+  "tool": "built-in image_gen",
+  "type": "original transparent RGBA raster atlas",
+  "file": "v79-shop-products.png",
+  "originalFile": "C:/Users/Administrator/.codex/generated_images/01a1719f-5683-77c0-be65-666944a26a9c/exec-25a1fae1-743d-4ec3-a532-1b06b7801470.png",
+  "prompt": "Use case: stylized-concept. Asset type: production-ready TRANSPARENT RGBA shop item sprite atlas for a refined Chinese fantasy Journey to the West 2D adventure game. Original hand-painted painterly cel-shaded treasures with restrained dark ink contours, jade, antique gold and vermilion materials, warm upper-left light; cohesive with highly detailed illustrated chibi characters. A square image, EXACTLY TWO COLUMNS by TWO ROWS, four equal square cells. Precise row-major order: top-left one squat vermilion-red glazed ceramic healing medicine bottle shaped like a small rounded gourd, warm ivory shoulder and antique-gold rim, tight red silk cord and brown stopper, a tiny simple embossed cloud motif with NO writing; top-right one slender turquoise-blue glazed porcelain spirit-restoring flask with elegant elongated neck, pale celadon shoulder, antique-gold rim and deep blue silk knot, closed stopper; bottom-left one precious jade-and-gold round pill jar containing the great restoration elixir, distinctive large spherical body, ornate gold domed lid with a single small red jewel, emerald jade lower body and cream-gold cloud carving, visibly more luxurious than the two medicines; bottom-right one bold irregular aquamarine strengthening crystal with a few attached small crystal facets, believable translucent gemstone planes, pale inner glints and dark teal base, NO pedestal or container. Four fully visible individual items, equal optical size, centered in their own cells, each occupies about 74 percent of cell height and width. Broad clean silhouette with rich material shading, legible at 80 pixels, not an emoji or simple flat icon. At least 12 percent clear transparent padding within every cell and wide separation, no item touches or overlaps another. Genuine alpha transparent background; no background scene, no checkerboard, no floor, no external cast shadow or ambient glow. Absolutely no text, calligraphy, numbers, letters, labels, borders, cells, UI, frame, watermarks, extra objects, loose ingredients, hands or characters.",
+  "transparencyRequested": true,
+  "processing": "Original generated PNG copied without pixel editing. Canvas source rectangles only.",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGBA",
+  "atlasLayout": {
+    "columns": 2,
+    "rows": 2
+  },
+  "transparentPixels": 1005569,
+  "sourceRects": {
+    "potion_hp": [
+      150,
+      61,
+      412,
+      528
+    ],
+    "potion_mp": [
+      829,
+      44,
+      285,
+      561
+    ],
+    "bighp": [
+      70,
+      673,
+      503,
+      511
+    ],
+    "stone": [
+      717,
+      673,
+      466,
+      535
+    ]
+  },
+  "inspection": "Alpha analysed read-only. Source rectangles contain meaningful alpha silhouette plus padding. Original alpha and pixels preserved; no thresholding, trimming, scaling or background edits were applied to the PNG."
+}

@@ -1,0 +1,17 @@
+{
+  "title": "金箍棒打击音效 r1",
+  "date": "2026-10-11",
+  "source": "js/audio.js SFX/IMPACT_SFX",
+  "provenance": "本项目原创 WebAudio 振荡器、白噪声和 BiquadFilter 合成；无外部录音或采样",
+  "render": "screenshots/music_impact_sample.html using native OfflineAudioContext and the same audio.js graph",
+  "format": { "sampleRate": 44100, "channels": 1, "bits": 16, "duration": 2.2 },
+  "sfxVolume": 0.9,
+  "normalization": false,
+  "musicIncluded": false,
+  "timelineSeconds": { "slashContacts": [0.1, 0.2, 0.3], "heavyWindup": 0.42, "heavyContactWithTwoShadows": 0.51, "flameDash": 0.88 },
+  "files": {
+    "impact_combo_new.wav": { "peak": 0.12003583461046219, "rms": 0.006320971688018009 },
+    "impact_combo_old.wav": { "peak": 0.3071746230125427, "rms": 0.014556207399142644 }
+  },
+  "notes": "排练时间线不模拟顿帧。新命中按逻辑 tick 最强一次，旧版对照保留每目标 hit 与追加 hitHeavy。随机微变调及噪声使再次导出电平略有变化。"
+}

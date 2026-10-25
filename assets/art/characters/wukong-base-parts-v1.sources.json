@@ -1,0 +1,94 @@
+{
+  "title": "悟空基础装六部件原画",
+  "version": "v79 / parts-v1",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "stylized-concept",
+  "intent": "Original new asset using the project's wukong-parts-v1.png as a visual style reference only.",
+  "generated_original": "C:/Users/Administrator/.codex/generated_images/01a171a2-d3d6-79d2-b06b-16d2b641aa2a/exec-f6f1f765-c87d-4ddd-8503-09736adda45f.png",
+  "project_asset": "assets/art/characters/wukong-base-parts-v1.png",
+  "reference_images": [
+    {
+      "path": "assets/art/wukong-parts-v1.png",
+      "role": "style reference; existing original project art; face, skirt, cape and fist retained in runtime"
+    }
+  ],
+  "request": {
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept\nAsset type: original transparent 2D game skeletal sprite atlas, six separate unarmored Wukong body parts for a Chinese fantasy side-scrolling action game.\nInput image 1 is a STYLE REFERENCE ONLY: match its painterly brushwork, warm brown ink contour, dimensional golden-brown monkey fur, teal cloth and warm red scarf. Do not copy its metal armor, heads, weapons, cape, skirt or fists into the new atlas.\nPrimary request: create a NEW production-ready six-part atlas for the same monkey hero's plain starter outfit. One transparent PNG, landscape 1536x1024, clean 3-column by 2-row layout. Exactly six isolated parts, well separated by transparent gutters at least 80 pixels, each centered in its own equal cell. No cell grid or labels.\nTop row from left to right:\n1. Torso only: shaped sleeveless dark desaturated teal cloth vest, warm red scarf tied across collar, a few broad readable cloth folds, modest warm beige seam stitching, small red waist wrap. Neck opening above, narrow waist below. Three-quarter view facing screen right, matching reference torso orientation. NO head, arms, skirt, metal armor, gold chest plate or shoulder armor. Approximately 300px wide and 370px tall.\n2. Upper arm only: short straight golden-brown monkey fur upper arm, broad rounded shoulder joint at top center and rounded elbow joint at bottom center. Soft short fur silhouette and broad light/shadow masses, no shoulder plate, no hand. Vertical axis. Approximately 200px wide and 350px tall.\n3. Forearm only: straight golden-brown furry monkey forearm, elbow joint top center, narrow wrist bottom center, a narrow plain faded-red cloth wrist wrap at the bottom. NO metal bracer, NO fist or hand. Vertical axis. Approximately 180px wide and 350px tall.\nBottom row from left to right:\n4. Upper leg only: short dark teal woven trouser thigh segment, rounded hip joint top center and knee joint bottom center, simple broad cloth fold and one side seam. No thigh armor, no belt/skirt, no lower leg or foot. Vertical axis. Approximately 260px wide and 340px tall.\n5. Lower leg only: tapered dark teal trouser shin segment, knee joint top center and ankle bottom center, a few folded wrap bands around calf in slightly lighter faded teal. NO boot or foot. Vertical axis. Approximately 200px wide and 350px tall.\n6. Single plain boot: short soft dark-brown cloth/leather boot in side-three-quarter view, flat sole, toe points screen right, ankle top center-left, modest tan cloth cuff and warm worn edge highlights, no metal or jade ornament. Approximately 330px wide and 270px tall.\nStyle/medium: polished hand-painted Q-version fantasy game illustration, same tactile illustrated quality as reference, strong clean readable silhouettes at tiny game size, restrained detailed brush strokes inside broad forms, softly shaded dimensional material, warm upper-left light. These are independent intact character puppet pieces, not a body diagram or a complete person.\nConstraints: actually transparent alpha background; all outer gutters and spaces between pieces completely transparent; no background, no ground shadows, no glow, no text, no watermark, no borders, no spare objects. Exactly 6 parts. Preserve generous transparent margins. Keep top and bottom joint endpoints on the central vertical axis of the four limb segments so they can be affinely mapped to unchanged joint positions. Full parts entirely visible, no cropping. Do not include head, hands, weapon, cape, tiger skirt or metallic armor."
+  },
+  "output": {
+    "sha256": "3f5b27a3035ebb09ebe7f6991b64c5d96552d4b101b00f8fd92cacadafa0544d",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "transparent_pixels": 1047929,
+    "opaque_pixels": 0,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "post_processing": "None. Original PNG bytes copied unchanged; source rectangles select the six parts. Low-alpha (<8/255) fringe noise outside each silhouette is excluded by source cropping."
+  },
+  "source_rects": {
+    "chest": [
+      126,
+      23,
+      425,
+      466
+    ],
+    "upper": [
+      685,
+      41,
+      236,
+      437
+    ],
+    "fore": [
+      1137,
+      64,
+      190,
+      431
+    ],
+    "thigh": [
+      164,
+      502,
+      345,
+      481
+    ],
+    "shin": [
+      692,
+      507,
+      210,
+      481
+    ],
+    "boot": [
+      1067,
+      639,
+      394,
+      323
+    ]
+  },
+  "limb_axis": {
+    "upper": {
+      "top": 0.496,
+      "bottom": 0.625
+    },
+    "fore": {
+      "top": 0.492,
+      "bottom": 0.684
+    },
+    "thigh": {
+      "top": 0.4,
+      "bottom": 0.633
+    },
+    "shin": {
+      "top": 0.548,
+      "bottom": 0.519
+    }
+  },
+  "integration": {
+    "runtime": "js/sprites.js",
+    "readiness": "Private baseAtlas/baseBack become available together after Image.onload; no new Z export.",
+    "selection": "Base torso, arms and boots are used only when the armor slot is empty/invalid. Shared cloth legs retain existing joint positions under every armor family. Equipped armor images take precedence. Existing face, skirt, cape, fist, staff and pose calculations are retained.",
+    "fallback": "Until new image onload, or when it fails, original Canvas / existing atlas branches remain. Loading does not read/write save data."
+  }
+}

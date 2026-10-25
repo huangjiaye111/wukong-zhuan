@@ -1,0 +1,30 @@
+{
+  "asset": "journey-boss-parts-v1.png",
+  "version": "journey-boss-parts-v1",
+  "date": "2026-10-23",
+  "type": "original generated transparent skeletal atlas",
+  "generator": "OpenAI built-in image_gen",
+  "source": "C:/Users/Administrator/.codex/generated_images/01a16939-eb69-7731-9c07-e9b3751d1e40/exec-bedff802-21ff-40a0-b5c7-bd16c6a6afdf.png",
+  "inputImages": [],
+  "prompt": "Use case: stylized-concept. Asset type: transparent 2D skeletal game sprite atlas for an original Journey to the West action RPG, eight boss heads and eight separate chest pieces. Produce ONE square atlas, perfectly regular 4 columns by 4 rows, each cell isolated with generous transparent margins. Painted Chinese fantasy chibi art with expressive almond eyes, dimensional warm skin, textured hair strands, sculpted burnished gold, fine silk and small scale armor. Confident fine brown contours, painterly shading, crisp readable silhouette, soft upper-left light. All heads face RIGHT in a three-quarter side view, almost profile, serious courageous or menacing expressions, large vivid eyes, never flat geometric faces. Keep all hair/crowns/horns fully within their cell. No text, labels, background, drop shadow, grid lines or extra objects. Row 1, left to right: head of Chiguo Tianwang, proud mature clean-shaven man with elegant purple gold celestial crown; head of Erlang Shen, young handsome stern man with silver winged helmet and prominent gold vertical third eye; head of a sea yaksha, teal blue-green fierce face, short ivory horns and tusks, gold teal helmet; head of turtle prime minister, kind cunning old pale green turtle-faced man with white brows/moustache and long narrow white beard, small dark olive official cap. Row 2, left to right: their corresponding isolated armor chests WITHOUT HEADS, ARMS, HANDS, LEGS OR WEAPONS, with a short torso and shoulder pauldrons: purple-gold embroidered celestial robe/chest; silver-blue scale armor with burnished gold trim; dark teal wave engraved armor with gold trim; olive-green robe with antique gold borders and shell pattern center. Row 3, left to right: head of East Sea dragon king Ao Guang, pale turquoise dragon-human male with ivory antler horns, long flowing white whiskers/beard, small elegant blue-gold crown; head of Red Boy, fiery arrogant red-cheeked child, dark twin hair buns tied red, small gold forehead jewel; head of Princess Iron Fan, dignified beautiful adult woman with expressive sharp eyes, pale warm skin, jade earrings, black sculpted updo and gold jade hairpins; head of Bull Demon King, powerful brown bovine bull face with broad muzzle, large ivory horns, thick eyebrows, small gold forehead armor and beard. Row 4: corresponding isolated armor/robe chests WITHOUT HEADS, ARMS, HANDS, LEGS OR WEAPONS: blue-gold dragon scale robe chest; red/gold child battle vest with small warm skin center panel; jade-green silk bodice/robe with elegant antique gold filigree; heavy bronze/brown bull king armor with imposing gold shoulders. The 16 pieces are detached riggable cutouts; heads include only a tiny neck stump and no chest. Chests include only shoulder armor but no limbs. Maintain identical polished illustrated game style across all sixteen pieces. True transparent alpha background.",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaPreserved": true,
+  "processing": "Copied generated PNG unchanged. Sprite source rectangles and small clipping paths remove neighboring parts at render time; no image editing or third-party artwork.",
+  "pieces": [
+    "chiguo head/chest",
+    "erlang head/chest",
+    "yecha head/chest",
+    "guiguo head/chest",
+    "aoguang head/chest",
+    "honghaier head/chest",
+    "tieshan head/chest",
+    "niuwang head/chest"
+  ],
+  "integration": "js/sprites.js journeyRects/journeyPart/qJourneyBoss; shared original joints and real pat.t/recoveryT. Existing Canvas shapes remain fallback if image fails.",
+  "preview": "screenshots/complete_bosses_sample.html",
+  "audio": "No audio generation or playback used for this visual asset."
+}

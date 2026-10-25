@@ -1,0 +1,8 @@
+{
+  "file": "pet-hou-parts-r2.png",
+  "tool": "built-in image_gen.imagegen",
+  "generated_original": "C:/Users/Administrator/.codex/generated_images/01a12979-3cf2-76a3-ae35-f88083e058a4/exec-13303fae-9886-403c-abae-0fb89e38bb37.png",
+  "reference": "pet-hou-parts-r1.png",
+  "purpose": "Correct artificial pale cutcap sockets to naturally continuous fur; imagegen edit retained atlas layout.",
+  "prompt": "Use case: precise-object-edit. Input image is the project's original modular monkey sprite atlas, the edit target. Change ONLY the exposed flat pale peach oval cross-section / cut socket shapes at the connection ends of the head, torso, tail, arms and legs. Replace ALL these artificial joint-end ovals with naturally finished honey-brown fur / cream belly fur that continues softly to each connection root, so no part looks amputated or like a toy's flesh-colored ball joint. On the head's neck root use ordinary cream furry throat; on body sides and hips use golden brown fur; on arm/leg/tail roots use golden-brown fur. Preserve every detached part's exact placement, outline extent, dimensions, color palette, facial identity, headband, scarf, hands and feet, both head expressions. Do not re-layout the grid or move or rotate or scale anything. Keep nine existing parts fully detached with original generous transparent gaps. Keep original hand-painted cel shaded illustration. No new parts. No labels, no shadows, no background, genuine transparency. This is a surgical material correction to artificial cutcaps, not a redesign."
+}

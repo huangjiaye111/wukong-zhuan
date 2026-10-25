@@ -1,0 +1,46 @@
+{
+  "created": "2026-10-23",
+  "generator": "Built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "alphaVerified": "All PNG files are RGBA with alpha extrema 0 and 255 (Pillow read-only inspection).",
+  "referenceInspection": [
+    "assets/art/characters/heaven-enemy-parts-v1.png",
+    "assets/art/wukong-parts-v1.png"
+  ],
+  "referenceUse": "Existing project originals visually inspected for style; no image inputs passed to these new generation calls.",
+  "processing": "Original generated PNG files copied byte-for-byte; no pixel editing or recompression. Runtime crop rectangles and two clipping polygons separate adjacent bat/hound fur, and sprites.js positions separate parts on animated skeletons.",
+  "runtimeReady": "Z.Spr.journeyEnemyArtReady()",
+  "runtimeFallback": "Each sheet independently falls back to the corresponding Canvas drawing until its Image.onload; no new stats, collision, save or AI fields.",
+  "assets": [
+    {
+      "asset": "journey-enemies-parts-v1.png",
+      "sourceOutput": "C:/Users/Administrator/.codex/generated_images/01a1693a-1ece-7ca3-92a1-a71534178c55/exec-cc2ab464-3887-4386-8e74-33b83ada6454.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1995368,
+      "sha256": "f4ec95f05e35b42a0be9f5b702e6f1702cb813d76b859adced8203a13f13bade",
+      "promptFile": "journey-enemies-parts-v1.prompt.txt",
+      "prompt": "Use case: stylized-concept. Asset type: original transparent 2D skeletal-animation game sprite atlas for a Chinese mythology action game. Create ONE square texture sheet of SIX completely separate painted parts in a strict TWO-column by THREE-row grid. Every cell contains exactly one large isolated part, centered with generous transparent gutters so parts never touch; no labels, no panel borders, no background, no cast shadows. All pieces share a right-facing three-quarter side view and the same lighting from upper left. Painterly cel-shaded Q-version Chinese fantasy game art matching a richly painted little Monkey King: crisp dark brown outlines, rounded solid forms, beautiful layered brushwork, warm gold edge lights, readable material variation and expressive eyes, NOT flat vector art, NOT realistic grotesque anatomy. Top row LEFT: shrimp soldier head only, coral-red chitin helmet with a long swept-back paired antenna, pointed shrimp rostrum nose, alert amber eyes, small cheek plates, recognizably shrimp-like rather than a plain human. Top row RIGHT: separate shrimp soldier chest-to-waist armor only, rounded coral-red segmented shell cuirass with jade-teal and antique gold trim, short overlapping waist plates; hollow neck and shoulder openings, no head, arms, hands, legs, tail or weapons. Middle row LEFT: fire demon head only, compact mischievous ochre-red face with broad cheekbones, bright amber eyes, thick eyebrows, flowing flame-shaped red/orange hair with pale gold cores, expressive stern face. Middle row RIGHT: separate fire demon chest-to-waist armor only, charcoal plum lamellar cuirass with glowing ember flame crest and warm bronze edging, short burnt-red waist cloth; hollow neck and shoulder openings, no head, arms, hands, legs or weapon. Bottom row LEFT: celestial royal guard head only, stern young man with expressive brown eyes and a small moustache, burgundy helmet with restrained gold filigree and one sweeping dark-red plume. Bottom row RIGHT: separate royal guard chest-to-waist armor only, rich burgundy and antique gold Chinese lamellar armor with a cloud medallion and short plated skirt; hollow neck and shoulder openings, no head, arms, hands, legs, cape or weapon. Keep all six pieces anatomically compatible with a stout 2.8-head-tall chibi skeleton. Each head fills nearly its cell without clipping the antennae or plume. Each torso is short and broad, approximately as wide as the head. Genuine clean alpha transparency everywhere outside each object. No complete assembled character, no other items, no text, no watermark.\n"
+    },
+    {
+      "asset": "journey-beasts-parts-v1.png",
+      "sourceOutput": "C:/Users/Administrator/.codex/generated_images/01a1693a-1ece-7ca3-92a1-a71534178c55/exec-100e2c50-d5e4-4ebc-b718-a6aee5705fc5.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1950304,
+      "sha256": "6a67d1fadc31083ae97a62aedc8312e7a63a89237b6e25c046c56544feef5dfa",
+      "promptFile": "journey-beasts-parts-v1.prompt.txt",
+      "prompt": "Use case: stylized-concept. Asset type: original transparent game texture atlas of four separate parts for skeletal animation in a polished 2D Chinese mythology action game. ONE square atlas in a strict TWO columns by TWO rows grid, one isolated painted part in each cell with generous transparent gutters. Painterly cel-shaded Q-version Chinese fantasy art: rounded volumetric forms, crisp warm dark outlines, exquisite layered brushwork, restrained gold ornaments, slate-blue and plum tones, clear expressive features and fur material, matching a richly painted chibi Monkey King and celestial soldiers. Each part is drawn from right-facing three-quarter side view with upper-left light. Top LEFT: core head and compact furry torso of a small flying bat demon, NO WINGS and NO LEGS. Large pointed upright ears, expressive alert amber eyes under brows, short muzzle, two small ivory fangs, plum-violet fur, ivory ruff, dark purple compact torso, bronze-gold chest ornament. The head is large in a charming formidable Q-style, no horror or gore. Top RIGHT: one complete right bat wing, detached, from shoulder socket at LEFT to broad wing tips at RIGHT. Sculpted curved plum-violet membranes, deep lavender lower shade, lit mauve upper edge, ivory small thumb claw, strong gracefully scalloped silhouette, subtle veins and visible material. No body, no head. Bottom LEFT: head only of a celestial Chinese hound, facing RIGHT, large expressive amber eye, dark slate-blue and silver fur, long pointed ears, broad short wolf-like muzzle, ivory mane cheeks, dark nose, tiny fang, a small traditional gold forehead ornament. No collar, neck, body or legs. Bottom RIGHT: horizontal dog torso only, neck socket at the RIGHT, hips on LEFT, slate-blue and silver short fur with a deep teal saddle-shaped shoulder armor trimmed in warm antique gold cloud motifs, a narrow red ceremonial collar at the right neck socket. NO head, NO legs, NO paws and NO tail. Anatomically compatible with a compact Q-style quadruped, not a human torso. All four elements fully visible, clean alpha transparency outside each piece. No shadows on background, no grid lines, no labels, no text, no watermark, no complete assembled character.\n"
+    },
+    {
+      "asset": "journey-ocean-parts-v1.png",
+      "sourceOutput": "C:/Users/Administrator/.codex/generated_images/01a1693a-1ece-7ca3-92a1-a71534178c55/exec-f08c6ae7-44c7-4cc5-9ad6-80ad7a95f095.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1774155,
+      "sha256": "2e35d2116e056b87934123275c2ed52923141c65d17cefc956c50259a863a080",
+      "promptFile": "journey-ocean-parts-v1.prompt.txt",
+      "prompt": "Use case: stylized-concept. Asset type: original transparent skeletal-animation game sprite atlas for two East Sea monsters in a polished Chinese mythology action game. ONE square sheet containing FOUR separate painted parts in a strict TWO-column TWO-row grid, each isolated with generous transparent gutters. Top LEFT: central body carapace of a formidable charming Q-style crab general, front three-quarter view slightly facing right, compact round copper-orange hard shell with antique gold and dark jade shoulder plates, engraved ocean swirl medallion, layered pale sandy abdominal armor, two short expressive eyestalks with amber eyes and determined brows. NO legs, NO claws and NO separate hands. Top RIGHT: one detached crab claw only, pointed pincers opening to the right, copper-orange shell with muted gold armor edging, sculpted lit shell plates, ivory tips, small left wrist socket, no body or legs. Bottom LEFT: bell cap only of a small magical jellyfish spirit, rounded umbrella dome in a three-quarter view slightly facing right, pearlescent aqua and blue-green translucent material, deep indigo rim, soft luminous pale highlights, delicate gold rim and crown-shaped gold crest, two small expressive indigo eyes tucked under the rim. NO tentacles and NO body below the cap. Bottom RIGHT: one long detached narrow flowing jellyfish ribbon tentacle, jade-blue luminous ribbon with pearlescent silk-like folds, a small antique gold bead near its bottom, no cap or head. The ribbon should have a relaxed subtle S curve, broad enough to be a separately animated part. Painterly cel-shaded Chinese fantasy game art matching a richly painted chibi Monkey King and celestial guards: dark warm crisp contours, soft volumetric light, exquisite brushwork and layered material detail, rounded Q proportions, readable bold silhouettes, not flat vectors, no horror. Lighting from upper left. Complete pieces fully visible. Genuine clean alpha transparency outside each object. No ground shadow, no environment, no labels, no text, no watermark, no full assembled character, no extra objects.\n"
+    }
+  ]
+}
