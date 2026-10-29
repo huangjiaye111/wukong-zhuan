@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>悟空传</title>
+		<style>
+html, body, #canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	color: white;
+	background-color: black;
+	overflow: hidden;
+	touch-action: none;
+}
+
+#canvas {
+	display: block;
+}
+
+#canvas:focus {
+	outline: none;
+}
+
+#status, #status-splash, #status-progress {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#status, #status-splash {
+	top: 0;
+	bottom: 0;
+}
+
+#status {
+	background: radial-gradient(ellipse at 50% 36%, #24434b, #08131f 70%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	visibility: visible;
+	font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+#loading-title { color: #eed9a2; font-size: clamp(36px, 6vw, 68px); letter-spacing: .3em; margin: 0 0 20px .3em; }
+#loading-subtitle { color: #a6c0c2; font-size: 15px; letter-spacing: .16em; }
+#loading-detail { color: #a6c0c2; margin-top: 28px; font-size: 14px; }
+#loading-hint { color: #839c9d; margin: 18px 28px 0; font-size: 13px; text-align: center; }
+#loading-retry { display: none; margin-top: 20px; padding: 10px 28px; border: 1px solid #c8ac6e; border-radius: 5px; color: #f0dcab; background: #1c3942; font: inherit; cursor: pointer; }
+#status-progress { accent-color: #d9bc7b; height: 7px; }
+#save-import { width: min(680px, 82vw); padding: 28px; border: 1px solid #a78d57; border-radius: 12px; color: #e6e5da; background: #101f2c; font: 16px/1.7 "Microsoft YaHei", sans-serif; }
+#save-import::backdrop { background: #020a13cc; }
+#save-import h2 { color: #e8c880; margin: 0 0 12px; }
+#save-import textarea { box-sizing: border-box; width: 100%; height: 220px; padding: 12px; color: #e6e5da; background: #09151f; border: 1px solid #526b70; resize: vertical; }
+#save-import button { background: #294852; border: 1px solid #a78d57; color: #e6e5da; padding: 9px 22px; margin: 16px 12px 0 0; cursor: pointer; border-radius: 4px; font: inherit; }
+
+#status-splash {
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+#status-splash.show-image--false {
+	display: none;
+}
+
+#status-splash.fullsize--true {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#status-splash.use-filter--false {
+	image-rendering: pixelated;
+}
+
+#status-progress, #status-notice {
+	display: none;
+}
+
+#status-progress {
+	bottom: 25%;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#status-notice {
+	background-color: #5b3943;
+	border-radius: 0.5rem;
+	border: 1px solid #9b3943;
+	color: #e0e0e0;
+	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
+	line-height: 1.3;
+	margin: 0 2rem;
+	overflow: hidden;
+	padding: 1rem;
+	text-align: center;
+	z-index: 1;
+}
+		</style>
+		<meta name="theme-color" content="#0b1823">
+	</head>
+	<body>
+		<canvas id="canvas">
+			请使用支持 WebGL 2 的电脑浏览器打开游戏。
+		</canvas>
+
+		<noscript>
+			请启用 JavaScript 后重新打开游戏。
+		</noscript>
+
+		<div id="status">
+			<img id="status-splash" class="show-image--false fullsize--true use-filter--true" src="index.png" alt="">
+			<h1 id="loading-title">悟空传</h1>
+			<div id="loading-subtitle">天宫 · 东海 · 火焰山</div>
+			<div id="loading-detail" role="status">正在准备征途，首次打开需要下载游戏资源…</div>
+			<div id="loading-hint">按住 J 连击 · K 跳跃 · 空格无双 · H 法宝<br>修炼页可选择技能，设置中可修改按键。</div>
+			<progress id="status-progress"></progress>
+			<div id="status-notice"></div>
+			<button id="loading-retry" type="button">重新加载</button>
+		</div>
+		<dialog id="save-import" aria-labelledby="save-import-title">
+			<h2 id="save-import-title">导入存档备份</h2>
+			<label for="save-import-text">粘贴悟空传 JSON 备份，下一步会核对等级和金币。</label>
+			<textarea id="save-import-text" spellcheck="false"></textarea>
+			<button id="save-import-next" type="button">核对存档</button>
+			<button id="save-import-cancel" type="button">取消</button>
+		</dialog>
+
+		<script src="index.js"></script>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":60427436,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
+const engine = new Engine(GODOT_CONFIG);
+const importDialog = document.getElementById('save-import');
+const importText = document.getElementById('save-import-text');
+let importCallback;
+window.wukongImport = function (callback) {
+	importCallback = callback;
+	importText.value = '';
+	importDialog.showModal();
+	importText.focus();
+};
+document.getElementById('save-import-next').onclick = function () {
+	const value = importText.value;
+	importDialog.close();
+	document.getElementById('canvas').focus();
+	if (importCallback) importCallback(value);
+};
+document.getElementById('save-import-cancel').onclick = function () {
+	importDialog.close();
+	document.getElementById('canvas').focus();
+};
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+	const retry = document.getElementById('loading-retry');
+	retry.onclick = () => window.location.reload();
+	const beganAt = performance.now();
+	window.wukongLoad = { beganAt, bytes: 0, readyMs: null };
+
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) {
+			return;
+		}
+		if (mode === 'hidden') {
+			statusOverlay.remove();
+			initializing = false;
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function setStatusNotice(text) {
+		while (statusNotice.lastChild) {
+			statusNotice.removeChild(statusNotice.lastChild);
+		}
+		const lines = text.split('\n');
+		lines.forEach((line) => {
+			statusNotice.appendChild(document.createTextNode(line));
+			statusNotice.appendChild(document.createElement('br'));
+		});
+	}
+
+	function displayFailureNotice(err) {
+		console.error(err);
+		if (err instanceof Error) {
+			setStatusNotice(err.message);
+		} else if (typeof err === 'string') {
+			setStatusNotice(err);
+		} else {
+			setStatusNotice('加载未完成，请检查网络后重试。');
+		}
+		setStatusMode('notice');
+		document.getElementById('loading-detail').textContent = '暂时无法进入游戏，存档不会因重新加载而清除。';
+		retry.style.display = 'block';
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({
+		threads: GODOT_THREADS_ENABLED,
+	});
+
+	if (missing.length !== 0) {
+		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
+			let serviceWorkerRegistrationPromise;
+			try {
+				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
+			} catch (err) {
+				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
+			}
+			// There's a chance that installing the service worker would fix the issue
+			Promise.race([
+				serviceWorkerRegistrationPromise.then((registration) => {
+					if (registration != null) {
+						return Promise.reject(new Error('Service worker already exists.'));
+					}
+					return registration;
+				}).then(() => engine.installServiceWorker()),
+				// For some reason, `getRegistration()` can stall
+				new Promise((resolve) => {
+					setTimeout(() => resolve(), 2000);
+				}),
+			]).then(() => {
+				// Reload if there was no error.
+				window.location.reload();
+			}).catch((err) => {
+				console.error('Error while registering service worker:', err);
+			});
+		} else {
+			// Display the message as usual
+			const missingMsg = '当前浏览器缺少游戏运行能力，请使用支持 WebGL 2 的新版电脑浏览器：\n';
+			displayFailureNotice(missingMsg + missing.join('\n'));
+		}
+	} else {
+		setStatusMode('progress');
+		engine.startGame({
+			'onProgress': function (current, total) {
+				window.wukongLoad.bytes = current;
+				document.documentElement.dataset.loadedBytes = String(current);
+				if (current > 0 && total > 0) {
+					statusProgress.value = current;
+					statusProgress.max = total;
+					document.getElementById('loading-detail').textContent = current < total
+						? `正在加载 ${Math.round(current / total * 100)}% · ${(current / 1048576).toFixed(1)} / ${(total / 1048576).toFixed(1)} MB`
+						: '资源已就绪，正在开启征途…';
+				} else {
+					statusProgress.removeAttribute('value');
+					statusProgress.removeAttribute('max');
+				}
+			},
+		}).then(() => {
+			window.wukongLoad.readyMs = performance.now() - beganAt;
+			document.documentElement.dataset.readyMs = String(Math.round(window.wukongLoad.readyMs));
+			setStatusMode('hidden');
+		}, displayFailureNotice);
+	}
+}());
+		</script>
+	</body>
+</html>
+
