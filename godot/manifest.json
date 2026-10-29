@@ -1,41 +1,41 @@
 {
-  "build": "godot-r1-20261029",
+  "build": "godot-polish-r2-20261029",
   "engine": "4.7.2",
   "singleThreaded": true,
   "files": [
     {
-      "path": "index.html",
       "bytes": 7999,
-      "sha256": "eea9ba18761062b9f85b940fae13840c3dff166e740ea9be64cc72d220f0a941"
+      "path": "index.html",
+      "sha256": "be94587a2744e6f1ef879c1f3d9f2043564c1523378f009c04853ccab911f18b"
     },
     {
-      "path": "index.js",
       "bytes": 279815,
+      "path": "index.js",
       "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
     },
     {
-      "path": "index.wasm",
       "bytes": 39514754,
+      "path": "index.wasm",
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     {
+      "bytes": 55292156,
       "path": "index.pck",
-      "bytes": 67429444,
-      "sha256": "8b72b73b0c5eab65e0ca0707450a68fd10b58d24f4e4c47a1717c034b2e36a74"
+      "sha256": "ef7d2586122c829fda844993f1837491b755b3e434bd8d027627cfd00a7905b4"
     },
     {
-      "path": "index.audio.worklet.js",
       "bytes": 7298,
+      "path": "index.audio.worklet.js",
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
     {
-      "path": "index.audio.position.worklet.js",
       "bytes": 2973,
+      "path": "index.audio.position.worklet.js",
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
     {
-      "path": "index.png",
       "bytes": 21443,
+      "path": "index.png",
       "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
     }
   ]
