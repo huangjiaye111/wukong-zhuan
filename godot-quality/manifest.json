@@ -1,10 +1,10 @@
 {
-  "id": "quality-r2-20261030T123614Z",
+  "id": "quality-r3-20261030T151939Z",
   "engine": "4.7.2.stable",
   "runtime": {
     "index.html": {
       "bytes": 9242,
-      "sha256": "985a5afb9e22776e5d03a05eb3670011df5405a254a4b3af5b5125f7139f0bd2"
+      "sha256": "d20a6694dee6051a569be27edc9b41085d9a1ad6851a42adcd5d7463a0f0eadb"
     },
     "index.js": {
       "bytes": 279815,
@@ -15,8 +15,8 @@
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "index.pck": {
-      "bytes": 61558660,
-      "sha256": "d41ddc2b40731ae93bfc62f9e791172741cf69d26eb630860b1a910c53f4302c"
+      "bytes": 64068748,
+      "sha256": "3b7af22dccd3a79ffc6404414d8ce4132fb21859df38f55ce2f43c9a1770f932"
     },
     "index.png": {
       "bytes": 21443,
@@ -31,5 +31,5 @@
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     }
   },
-  "bytes": 101394185
+  "bytes": 103904273
 }
