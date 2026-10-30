@@ -249,6 +249,8 @@ document.getElementById('save-import-cancel').onclick = function () {
 		setStatusMode('progress');
 		engine.startGame({
 			'onProgress': function (current, total) {
+				// A final progress callback may arrive after startGame resolves.
+				if (!initializing) return;
 				window.wukongLoad.bytes = current;
 				document.documentElement.dataset.loadedBytes = String(current);
 				if (current > 0 && total > 0) {
