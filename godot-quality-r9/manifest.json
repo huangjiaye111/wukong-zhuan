@@ -1,0 +1,43 @@
+{
+  "id": "quality-r9-20261031T074923Z",
+  "engine": "4.7.2.stable",
+  "runtime": {
+    "index.html": {
+      "bytes": 15824,
+      "sha256": "a4e23ceeee2284535c5344a211d8e9f96f3d31a6f9e3e1c74d59978cbc1a7a96"
+    },
+    "index.js": {
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "index.wasm": {
+      "bytes": 39514754,
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "index.pck": {
+      "bytes": 74380536,
+      "sha256": "dd060f66456235ae6c375d49f6f70f13dc7972508e81d3ab3d3c9b2b79acfd14"
+    },
+    "index.png": {
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "index.audio.worklet.js": {
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "index.audio.position.worklet.js": {
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "entry-background.webp": {
+      "bytes": 92598,
+      "sha256": "ba48d0253149508fe2964b13dcfcaf0e62da0b51dee18c9ba3634b0cedf843cf"
+    },
+    "entry-logo.webp": {
+      "bytes": 36710,
+      "sha256": "2f7ba0946b8181dea609da06650d5940e388b8c9e64a24550da87004012135b7"
+    }
+  },
+  "bytes": 114351951
+}
