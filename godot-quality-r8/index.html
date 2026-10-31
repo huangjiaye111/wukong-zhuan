@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>悟空传</title>
+		<style>
+html, body, #canvas { margin: 0; padding: 0; border: 0; }
+body { color: #f3e6c6; background: #081b23; overflow: hidden; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+[hidden] { display: none !important; }
+#canvas { display: block; touch-action: none; }
+#canvas:focus { outline: none; }
+button:focus-visible, summary:focus-visible, textarea:focus-visible { outline: 2px solid #ffe1a0; outline-offset: 4px; }
+#status {
+	position: fixed; inset: 0; z-index: 1; overflow: auto; display: grid; place-items: center;
+	background: radial-gradient(ellipse at 50% 30%, #315860, #0b202b 76%);
+	touch-action: pan-y; transition: opacity 160ms ease-out;
+}
+#status::before {
+	content: ""; position: fixed; inset: 0; pointer-events: none;
+	background: linear-gradient(180deg, #071a2520 12%, #071a2540 44%, #071a25e8 100%), url("entry-background.webp") center 42% / cover no-repeat;
+}
+#status.is-ready { opacity: 0; pointer-events: none; }
+.entry-content { position: relative; box-sizing: border-box; width: min(100%, 960px); padding: 30px 24px; text-align: center; }
+#loading-title { position: relative; display: grid; place-items: center; margin: 0; min-height: 148px; color: #f7d795; font-family: "STKaiti", "KaiTi", serif; font-size: clamp(52px, 9vw, 88px); letter-spacing: .14em; text-shadow: 0 4px 14px #03151ddd; }
+#loading-title-text { padding-left: .14em; }
+#entry-logo { width: min(370px, 82vw); max-height: 172px; object-fit: contain; }
+#loading-subtitle { margin: 6px 0 10px; color: #e4d8b6; font-size: 14px; letter-spacing: .25em; text-shadow: 0 2px 5px #071a25; }
+.cloud-mark { display: block; width: 154px; height: 24px; margin: 0 auto 22px; fill: none; stroke: #dfc48c; stroke-width: 1.2; opacity: .75; }
+.loading-panel { box-sizing: border-box; width: min(440px, 100%); margin: 0 auto; padding: 20px 26px 18px; border: 1px solid #c5ac734d; border-radius: 4px 20px; background: #0b2530df; box-shadow: 0 10px 36px #04141b50, inset 0 1px #f6dba318; }
+#loading-detail { margin: 0 0 10px; color: #efe3c4; font-size: 15px; line-height: 1.6; }
+.loading-metrics { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; text-align: left; }
+#loading-percent { color: #f3d38e; font-size: 30px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.4; }
+#loading-bytes { color: #a6bfc1; font-size: 12px; text-align: right; font-variant-numeric: tabular-nums; }
+#status-progress { display: block; width: 100%; height: 6px; margin: 10px 0 0; border: 0; border-radius: 3px; overflow: hidden; background: #496268; accent-color: #e4be70; }
+#status-progress::-webkit-progress-bar { background: #496268; border-radius: 3px; }
+#status-progress::-webkit-progress-value { background: linear-gradient(90deg, #b48c47, #f1d594); border-radius: 3px; }
+#status-progress::-moz-progress-bar { background: #e4be70; border-radius: 3px; }
+#status-progress:indeterminate { background: linear-gradient(90deg, #496268 10%, #d7b66e 48%, #496268 86%); background-size: 200% 100%; animation: cloud-progress 1.8s ease-in-out infinite; }
+#status-progress:indeterminate::-webkit-progress-bar { background: transparent; }
+#loading-hint { margin: 15px 0 0; color: #b5c7c4; font-size: 12px; line-height: 1.7; }
+#status-notice { margin-top: 12px; text-align: left; font-size: 14px; line-height: 1.7; color: #f0dbb2; }
+#status-notice p { margin: 0 0 8px; }
+#status-notice details { color: #b5c7c4; font-size: 12px; }
+#status-notice summary { width: fit-content; cursor: pointer; padding: 4px 0; }
+#loading-error-detail { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 130px; overflow: auto; font: 12px/1.6 monospace; }
+#loading-retry { min-height: 44px; margin: 16px auto 0; padding: 10px 28px; border: 1px solid #d6b773; border-radius: 4px; color: #f9e5b6; background: #294c54; font: inherit; cursor: pointer; }
+#loading-retry:hover { background: #365e64; }
+#save-import { box-sizing: border-box; width: min(680px, 90vw); max-height: 90vh; padding: 28px; border: 1px solid #a78d57; border-radius: 12px; color: #e6e5da; background: #101f2c; font: 16px/1.7 "Microsoft YaHei", sans-serif; }
+#save-import::backdrop { background: #020a13cc; }
+#save-import h2 { color: #e8c880; margin: 0 0 12px; }
+#save-import textarea { box-sizing: border-box; width: 100%; height: 220px; padding: 12px; color: #e6e5da; background: #09151f; border: 1px solid #526b70; resize: vertical; }
+#save-import button { min-height: 44px; background: #294852; border: 1px solid #a78d57; color: #e6e5da; padding: 9px 22px; margin: 16px 12px 0 0; cursor: pointer; border-radius: 4px; font: inherit; }
+noscript { position: fixed; inset: 0; z-index: 2; display: grid; place-items: center; padding: 24px; background: #0b202b; text-align: center; }
+@keyframes cloud-progress { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@media (max-width: 480px) { .entry-content { padding: 24px 16px; } .loading-panel { padding: 18px; } #loading-subtitle { font-size: 12px; letter-spacing: .16em; } #loading-percent { font-size: 26px; } #save-import { padding: 20px; } }
+@media (max-height: 560px) { .entry-content { padding-top: 18px; padding-bottom: 18px; } #loading-title { min-height: 108px; } #entry-logo { max-height: 130px; } .cloud-mark { margin-bottom: 14px; } }
+@media (prefers-reduced-motion: reduce) { #status { transition: none; } #status-progress:indeterminate { animation: none; } }
+		</style>
+		<meta name="theme-color" content="#0b1823">
+	</head>
+	<body>
+		<canvas id="canvas" tabindex="0" aria-label="悟空传游戏画面">请使用支持 WebGL 2 的电脑浏览器打开游戏。</canvas>
+		<noscript>请启用 JavaScript 后重新打开游戏。</noscript>
+		<div id="status" aria-busy="true" aria-labelledby="loading-title">
+			<div class="entry-content">
+				<h1 id="loading-title" aria-label="悟空传"><span id="loading-title-text">悟空传</span><img id="entry-logo" src="entry-logo.webp" alt="" hidden></h1>
+				<p id="loading-subtitle">云上西游 · 整装再出发</p>
+				<svg class="cloud-mark" viewBox="0 0 154 24" aria-hidden="true"><path d="M1 19h43c9 0 9-11 1-11-6 0-8 8-2 8h23m87 3h-43c-9 0-9-11-1-11 6 0 8 8 2 8H88M67 19c-9-6-4-14 3-12 0-8 14-8 14 0 7-2 12 6 3 12Z"/></svg>
+				<section class="loading-panel" aria-label="游戏加载">
+					<p id="loading-detail" role="status" aria-live="polite" aria-atomic="true">正在连接云上仙境…</p>
+					<div id="loading-metrics" class="loading-metrics"><strong id="loading-percent" aria-hidden="true">准备中</strong><span id="loading-bytes">正在连接游戏程序</span></div>
+					<progress id="status-progress" aria-labelledby="loading-detail" aria-describedby="loading-bytes"></progress>
+					<p id="loading-hint">展开西游山河，选择此行的目的地。</p>
+					<div id="status-notice" role="alert" hidden><p id="loading-error"></p><details><summary>查看技术详情</summary><pre id="loading-error-detail"></pre></details></div>
+					<button id="loading-retry" type="button" hidden>重新加载</button>
+				</section>
+			</div>
+		</div>
+		<dialog id="save-import" aria-labelledby="save-import-title">
+			<h2 id="save-import-title">导入存档备份</h2>
+			<label for="save-import-text">粘贴悟空传 JSON 备份，下一步会核对等级和金币。</label>
+			<textarea id="save-import-text" spellcheck="false"></textarea>
+			<button id="save-import-next" type="button">核对存档</button>
+			<button id="save-import-cancel" type="button">取消</button>
+		</dialog>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":66068716,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
+const importDialog = document.getElementById('save-import');
+const importText = document.getElementById('save-import-text');
+let importCallback;
+window.wukongImport = function (callback) {
+	importCallback = callback;
+	importText.value = '';
+	importDialog.showModal();
+	importText.focus();
+};
+document.getElementById('save-import-next').onclick = function () {
+	const value = importText.value;
+	const callback = importCallback;
+	importCallback = null;
+	importDialog.close();
+	document.getElementById('canvas').focus();
+	if (callback) callback(value);
+};
+document.getElementById('save-import-cancel').onclick = function () {
+	importCallback = null;
+	importDialog.close();
+	document.getElementById('canvas').focus();
+};
+importDialog.oncancel = function () {
+	importCallback = null;
+	document.getElementById('canvas').focus();
+};
+
+(function () {
+	const overlay = document.getElementById('status');
+	const progress = document.getElementById('status-progress');
+	const detail = document.getElementById('loading-detail');
+	const percent = document.getElementById('loading-percent');
+	const bytes = document.getElementById('loading-bytes');
+	const retry = document.getElementById('loading-retry');
+	const logo = document.getElementById('entry-logo');
+	const titleText = document.getElementById('loading-title-text');
+	const beganAt = performance.now();
+	const params = new URLSearchParams(window.location.search);
+	const temporary = ['practice', 'trial', 'artpilot'].some(key => params.get(key) === '1');
+	const preview = !temporary && params.get('preview') === '1';
+	document.getElementById('loading-hint').textContent = temporary
+		? '临时试玩 · 刷新会重置；需要保留进度请使用固定开发试玩入口。'
+		: preview ? '正在准备读取本机试玩存档 · 地图可直接选关。' : '正在准备读取本机进度 · 设置中可下载存档备份。';
+	const telemetry = window.wukongLoad = { beganAt, bytes: 0, totalBytes: null, downloadMs: null, engineReadyMs: null, readyMs: null, phase: 'connecting' };
+	let terminal = false;
+	retry.onclick = () => window.location.reload();
+	logo.onload = function () {
+		logo.hidden = false;
+		titleText.hidden = true;
+	};
+	logo.onerror = function () {
+		logo.hidden = true;
+		titleText.hidden = false;
+	};
+	if (logo.complete && logo.naturalWidth > 0) logo.onload();
+
+	function phase(value) {
+		telemetry.phase = value;
+		document.documentElement.dataset.loadPhase = value;
+	}
+	phase('connecting');
+	document.documentElement.dataset.loadedBytes = '0';
+
+	function indeterminate() {
+		progress.removeAttribute('value');
+		progress.removeAttribute('max');
+	}
+	function displayFailureNotice(err, message) {
+		if (terminal) return;
+		terminal = true;
+		console.error(err);
+		phase('error');
+		overlay.setAttribute('aria-busy', 'false');
+		detail.textContent = '暂时无法进入游戏';
+		progress.hidden = true;
+		document.getElementById('loading-metrics').hidden = true;
+		document.getElementById('loading-hint').textContent = '重新加载不会清除已保存的游戏进度。';
+		document.getElementById('loading-error').textContent = message || (telemetry.downloadMs === null ? '游戏资源尚未加载完成，请检查网络后重试。' : '资源已下载，但游戏未能启动。请重新加载后再试。');
+		document.getElementById('loading-error-detail').textContent = err && err.message ? err.message : String(err || '未提供错误详情');
+		document.getElementById('status-notice').hidden = false;
+		retry.hidden = false;
+	}
+	function onProgress(current, total) {
+		// Godot can deliver its final progress callback after startGame resolves.
+		if (terminal) return;
+		current = Number.isFinite(current) && current >= 0 ? current : 0;
+		total = Number.isFinite(total) && total > 0 ? total : 0;
+		telemetry.bytes = current;
+		telemetry.totalBytes = total || null;
+		document.documentElement.dataset.loadedBytes = String(current);
+		if (total && current >= total) {
+			if (telemetry.downloadMs === null) {
+				telemetry.downloadMs = performance.now() - beganAt;
+				document.documentElement.dataset.downloadMs = String(Math.round(telemetry.downloadMs));
+			}
+			phase('starting');
+			detail.textContent = '资源下载完成，正在启动游戏…';
+			percent.textContent = '启动中';
+			bytes.textContent = `已下载 ${(current / 1048576).toFixed(1)} MB`;
+			indeterminate();
+		} else {
+			phase('downloading');
+			detail.textContent = '正在下载游戏资源…';
+			if (total) {
+				progress.max = total;
+				progress.value = current;
+				percent.textContent = `${Math.floor(current / total * 100)}%`;
+				bytes.textContent = `${(current / 1048576).toFixed(1)} / ${(total / 1048576).toFixed(1)} MB`;
+			} else {
+				indeterminate();
+				percent.textContent = '下载中';
+				bytes.textContent = current ? `已下载 ${(current / 1048576).toFixed(1)} MB · 总量待确认` : '正在确认资源大小';
+			}
+		}
+	}
+	function ready() {
+		if (terminal) return;
+		terminal = true;
+		telemetry.engineReadyMs = performance.now() - beganAt;
+		telemetry.readyMs = telemetry.engineReadyMs;
+		document.documentElement.dataset.engineReadyMs = String(Math.round(telemetry.engineReadyMs));
+		document.documentElement.dataset.readyMs = String(Math.round(telemetry.readyMs));
+		phase('ready');
+		overlay.setAttribute('aria-busy', 'false');
+		detail.textContent = '准备就绪';
+		document.getElementById('canvas').focus();
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			overlay.remove();
+		} else {
+			// The engine is already running; this only softens the visual handoff.
+			overlay.classList.add('is-ready');
+			overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+			setTimeout(() => overlay.remove(), 200);
+		}
+	}
+	function startEngine() {
+		if (terminal) return;
+		try {
+			const engine = new Engine(GODOT_CONFIG);
+			const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
+			if (missing.length) {
+				const message = '当前浏览器暂不支持游戏，请使用支持 WebGL 2 的新版电脑浏览器。';
+				if (GODOT_CONFIG.serviceWorker && GODOT_CONFIG.ensureCrossOriginIsolationHeaders && 'serviceWorker' in navigator) {
+					phase('environment');
+					detail.textContent = '正在准备浏览器运行环境…';
+					Promise.race([
+						Promise.resolve().then(() => navigator.serviceWorker.getRegistration()).then((registration) => {
+							if (registration != null) throw new Error('Service worker already exists.\n' + missing.join('\n'));
+							return engine.installServiceWorker();
+						}),
+						new Promise((resolve, reject) => setTimeout(() => reject(new Error('Service worker setup timed out.')), 2000)),
+					]).then(() => { if (!terminal) window.location.reload(); }, (err) => displayFailureNotice(err, message));
+				} else {
+					displayFailureNotice(missing.join('\n'), message);
+				}
+				return;
+			}
+			phase('downloading');
+			detail.textContent = '正在下载游戏资源…';
+			percent.textContent = '下载中';
+			bytes.textContent = '正在确认资源大小';
+			engine.startGame({ onProgress }).then(ready, displayFailureNotice);
+		} catch (err) {
+			displayFailureNotice(err, '游戏程序未能启动，请重新加载后再试。');
+		}
+	}
+	// Set up the usable loading/error UI before requesting the engine itself.
+	const engineScript = document.createElement('script');
+	const version = new URLSearchParams(window.location.search).get('v');
+	engineScript.src = 'index.js' + (version ? '?v=' + encodeURIComponent(version) : '');
+	engineScript.onload = startEngine;
+	engineScript.onerror = () => displayFailureNotice(new Error('Engine script failed to load: ' + engineScript.src), '游戏程序未能下载，请检查网络后重新加载。');
+	document.body.appendChild(engineScript);
+}());
+		</script>
+	</body>
+</html>
+
